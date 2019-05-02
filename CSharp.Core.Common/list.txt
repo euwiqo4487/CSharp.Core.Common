@@ -7,8 +7,8 @@ EDO
 Enum
 Interface
 IO
-Jepun.Core.Common.csproj
-Jepun.Core.Common.txt
+CSharp.Core.Common.csproj
+CSharp.Core.Common.txt
 Json
 list.txt
 Log

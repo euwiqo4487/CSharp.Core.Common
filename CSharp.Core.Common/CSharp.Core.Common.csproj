@@ -91,8 +91,8 @@
     <Compile Include="Compression\SevenZip.cs" />
     <Compile Include="Config\ConfigHelper.cs" />
     <Compile Include="Config\GenericElementCollection.cs" />
-    <Compile Include="Config\JepunConfig.cs" />
-    <Compile Include="Config\JepunSection.cs" />
+    <Compile Include="Config\CSharpConfig.cs" />
+    <Compile Include="Config\CSharpSection.cs" />
     <Compile Include="Config\MailElement.cs" />
     <Compile Include="Config\SendToElement.cs" />
     <Compile Include="Config\ShardElement.cs" />
@@ -165,7 +165,7 @@
     <Compile Include="Security\AppPrincipal.cs" />
     <Compile Include="Security\AppMsg.cs" />
     <Compile Include="Security\Impersonation.cs" />
-    <Compile Include="Security\JepunCustomer.cs" />
+    <Compile Include="Security\CSharpCustomer.cs" />
     <Compile Include="String\KeyValueStore.cs" />
     <Compile Include="String\LowerCase.cs" />
     <Compile Include="String\PatternManager.cs" />
