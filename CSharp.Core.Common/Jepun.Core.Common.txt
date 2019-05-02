@@ -1,0 +1,19 @@
+Jepun.Core.Common
+	Config
+	Crypto
+	Culture
+	Data
+	EDO
+	Enum
+	Interface
+	IO
+	Json
+	Log
+	Reflection
+	Resource
+	Security
+	Threading
+	Timer
+	Validate
+	Wcf
+	Xml

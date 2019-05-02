@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D061203A-BEDC-4626-8C78-8F96C63BFD55}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Jepun.Core.Common</RootNamespace>
+    <AssemblyName>Jepun.Core.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Dlls\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\DLLs\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\DLLs\Jepun.Core.Common.XML</DocumentationFile>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\DLLs\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>..\..\..\DLLs\Jepun.Core.Common.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>..\..\..\DLLs\Jepun.Core.Common.XML</DocumentationFile>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper">
+      <HintPath>..\DLLs\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Packages\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SevenZipSharp">
+      <HintPath>..\DLLs\SevenZipSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Algorithm\ConsistentHashing.cs" />
+    <Compile Include="Algorithm\IHashPartition.cs" />
+    <Compile Include="Algorithm\RoundRobinHashing.cs" />
+    <Compile Include="Compression\Compressor.cs" />
+    <Compile Include="Compression\SevenZip.cs" />
+    <Compile Include="Config\ConfigHelper.cs" />
+    <Compile Include="Config\GenericElementCollection.cs" />
+    <Compile Include="Config\JepunConfig.cs" />
+    <Compile Include="Config\JepunSection.cs" />
+    <Compile Include="Config\MailElement.cs" />
+    <Compile Include="Config\SendToElement.cs" />
+    <Compile Include="Config\ShardElement.cs" />
+    <Compile Include="Config\ShardServerElement.cs" />
+    <Compile Include="Crypto\CryptoHelper.cs" />
+    <Compile Include="Crypto\PasswordGenerator.cs" />
+    <Compile Include="Crypto\RNG.cs" />
+    <Compile Include="Culture\CultureHelper.cs" />
+    <Compile Include="Dapper\DapperHelper.cs" />
+    <Compile Include="Data\DbHelper.cs" />
+    <Compile Include="Data\DynamicReader.cs" />
+    <Compile Include="Data\IEntity.cs" />
+    <Compile Include="Extension\EnumerableExtension.cs" />
+    <Compile Include="Enum\ClusterState.cs" />
+    <Compile Include="Enum\CultureCode.cs" />
+    <Compile Include="Enum\EnumHelper.cs" />
+    <Compile Include="Enum\ProcessState.cs" />
+    <Compile Include="Environment\OperatingSystem.cs" />
+    <Compile Include="Image\ImageHelper.cs" />
+    <Compile Include="Interface\ILdapLoginSetting.cs" />
+    <Compile Include="Interface\ILogBehaviorSetting.cs" />
+    <Compile Include="IO\Base64Helper.cs" />
+    <Compile Include="IO\DateTimeHandler.cs" />
+    <Compile Include="IO\FileWatcher.cs" />
+    <Compile Include="IO\FtpClient.cs" />
+    <Compile Include="IO\OfficeHelper.cs" />
+    <Compile Include="IO\PathHelper.cs" />
+    <Compile Include="Json\JsonHelper.cs" />
+    <Compile Include="Config\ManagementAppSettings.cs" />
+    <Compile Include="LoadBalancing\AbstractLoadBalance.cs" />
+    <Compile Include="LoadBalancing\ILoadBalance.cs" />
+    <Compile Include="LoadBalancing\ConnectionNodeEventArgs.cs" />
+    <Compile Include="LoadBalancing\LoadBalanceHelper.cs" />
+    <Compile Include="Object\SerializableObject.cs" />
+    <Compile Include="Performance\PerfmonCategoryName.cs" />
+    <Compile Include="Performance\PerfmonCounterName.cs" />
+    <Compile Include="Performance\PerfmonInstanceName.cs" />
+    <Compile Include="Performance\PerformanceHelper.cs" />
+    <Compile Include="Properties\Resources.en-us.Designer.cs">
+      <DependentUpon>Resources.en-us.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Resources.zh-CN.Designer.cs">
+      <DependentUpon>Resources.zh-CN.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Registry\RegHelper.cs" />
+    <Compile Include="Resource\Resources.en-us.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.en-us.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\Resources.zh-cn1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.zh-cn.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Security\AppPrincipal.cs" />
+    <Compile Include="Security\AppMsg.cs" />
+    <Compile Include="Security\Impersonation.cs" />
+    <Compile Include="Security\JepunCustomer.cs" />
+    <Compile Include="String\KeyValueStore.cs" />
+    <Compile Include="String\LowerCase.cs" />
+    <Compile Include="String\PatternManager.cs" />
+    <Compile Include="String\StringHelper.cs" />
+    <Compile Include="String\UpperCase.cs" />
+    <Compile Include="Threading\LockHolder.cs" />
+    <Compile Include="Threading\PCQueue.cs" />
+    <Compile Include="Threading\SafeDictionary.cs" />
+    <Compile Include="Threading\SafeList.cs" />
+    <Compile Include="Threading\ThreadHelper.cs" />
+    <Compile Include="Timer\StopTimerException.cs" />
+    <Compile Include="UserTask\IUserTaskCallback.cs" />
+    <Compile Include="UserTask\ManagementTask.cs" />
+    <Compile Include="UserTask\UserTask.cs" />
+    <Compile Include="Util\CmdProcess.cs" />
+    <Compile Include="Util\Comparable.cs" />
+    <Compile Include="Util\CsvFileReader.cs" />
+    <Compile Include="Util\CsvFileWriter.cs" />
+    <Compile Include="Util\CsvHelper.cs" />
+    <Compile Include="Util\CsvRow.cs" />
+    <Compile Include="Util\UtilHelper.cs" />
+    <Compile Include="Wcf\WcfHelper.cs" />
+    <Compile Include="Wmi\WmiHelper.cs" />
+    <Compile Include="Xml\GenericXmlPersistenceManager.cs" />
+    <Compile Include="Xml\XmlHelper.cs" />
+    <Compile Include="Xml\XslAdapter.cs" />
+    <Compile Include="Enum\PasswordStrength.cs" />
+    <Compile Include="Enum\ErrorCode.cs" />
+    <Compile Include="Enum\MsgType.cs" />
+    <Compile Include="Interface\IConnectionStringSetting.cs" />
+    <Compile Include="IO\FileHelper.cs" />
+    <Compile Include="IO\StreamHelper.cs" />
+    <Compile Include="Log\LogHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reflection\AssemblyHelp.cs" />
+    <Compile Include="Resource\ErrorResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ErrorResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Security\AppContext.cs" />
+    <Compile Include="Security\AppIdentity.cs" />
+    <Compile Include="Timer\SimplexWorkerTiming .cs" />
+    <Compile Include="Validate\ValidHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.en-us.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.en-us.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.zh-CN.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.zh-CN.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\Resources.en-us.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.en-us.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\Resources.zh-cn.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.zh-cn1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\ErrorResource.en-us.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\ErrorResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ErrorResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\ErrorResource.zh-cn.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
