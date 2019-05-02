@@ -7,8 +7,8 @@
     <ProjectGuid>{D061203A-BEDC-4626-8C78-8F96C63BFD55}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Jepun.Core.Common</RootNamespace>
-    <AssemblyName>Jepun.Core.Common</AssemblyName>
+    <RootNamespace>CSharp.Core.Common</RootNamespace>
+    <AssemblyName>CSharp.Core.Common</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,14 +31,14 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\..\..\DLLs\Jepun.Core.Common.XML</DocumentationFile>
+    <DocumentationFile>..\..\..\DLLs\CSharp.Core.Common.xml</DocumentationFile>
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>..\..\..\DLLs\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DocumentationFile>..\..\..\DLLs\Jepun.Core.Common.XML</DocumentationFile>
+    <DocumentationFile>..\..\..\DLLs\CSharp.Core.Common.xml</DocumentationFile>
     <DebugType>full</DebugType>
     <PlatformTarget>x64</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>

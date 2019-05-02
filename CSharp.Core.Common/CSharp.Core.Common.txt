@@ -1,4 +1,4 @@
-Jepun.Core.Common
+CSharp.Core.Common
 	Config
 	Crypto
 	Culture
